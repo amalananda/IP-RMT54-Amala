@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "name": "Candi Borobudur",
+    "description": "Candi Buddha terbesar di dunia yang menjadi situs warisan dunia UNESCO.",
+    "imageUrl": "https://i.pinimg.com/564x/bc/58/e0/bc58e08f448baa3e80615f68acd32f8a.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Lawang Sewu",
+    "description": "Bangunan bersejarah dengan gaya arsitektur kolonial Belanda yang angker dan terkenal.",
+    "imageUrl": "https://i.pinimg.com/564x/f3/26/d7/f326d7f7395df495741cce06250a1921.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Dieng Plateau",
+    "description": "Dataran tinggi di Jawa Tengah dengan pemandangan alam indah dan situs purbakala.",
+    "imageUrl": "https://i.pinimg.com/564x/08/fd/3d/08fd3dd6797edbbc26f83449bc99b831.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Pantai Karimunjawa",
+    "description": "Kepulauan dengan pantai pasir putih dan kehidupan bawah laut yang menakjubkan.",
+    "imageUrl": "https://i.pinimg.com/564x/09/69/da/0969daf61f46497d0192563a5f8d5963.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Candi Prambanan",
+    "description": "Kompleks candi Hindu terbesar di Indonesia, terletak dekat perbatasan Jawa Tengah dan Yogyakarta.",
+    "imageUrl": "https://i.pinimg.com/564x/fc/68/d9/fc68d931b71dec8640745129067aae6b.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Kampung Batik Laweyan",
+    "description": "Kawasan wisata budaya yang terkenal dengan kerajinan batik khas Solo.",
+    "imageUrl": "https://i.pinimg.com/564x/4b/99/0a/4b990a46619205b1dcd5b3d22a6aba32.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Pantai Menganti",
+    "description": "Pantai eksotis dengan pasir putih dan pemandangan perbukitan di Kebumen, Jawa Tengah.",
+    "imageUrl": "https://i.pinimg.com/564x/b6/a4/99/b6a4992dbcb202089e71e05b9673272a.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Gunung Merbabu",
+    "description": "Gunung berapi yang populer untuk pendakian dengan pemandangan yang indah di puncaknya.",
+    "imageUrl": "https://i.pinimg.com/736x/83/e6/74/83e67412ee4c7cf6a10c051c5e7f1773.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Curug Lawe",
+    "description": "Air terjun tersembunyi dengan suasana alami di daerah Ungaran, Semarang.",
+    "imageUrl": "https://i.pinimg.com/736x/00/a7/b7/00a7b771e2f153b22a18a48764cdd00f.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Brown Canyon",
+    "description": "Area bekas tambang yang menyerupai Grand Canyon dengan tebing-tebing tinggi di Semarang.",
+    "imageUrl": "https://i.pinimg.com/564x/6c/68/98/6c68983e462d0c21e2faf21d471ac7e0.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Rawa Pening",
+    "description": "Danau luas dengan pemandangan pegunungan yang indah di sekitar Ambarawa.",
+    "imageUrl": "https://i.pinimg.com/564x/12/b0/db/12b0dbc3d52451e30e47a2cba0c5b63d.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Museum Kereta Api Ambarawa",
+    "description": "Museum yang menampilkan sejarah perkeretaapian di Indonesia dengan koleksi kereta api tua.",
+    "imageUrl": "https://i.pinimg.com/736x/58/14/2d/58142d949e7840bbfca64907933a9d63.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Masjid Agung Demak",
+    "description": "Masjid tertua di Jawa yang merupakan peninggalan dari Kesultanan Demak.",
+    "imageUrl": "https://i.pinimg.com/564x/7f/63/47/7f634766feec7d41aa1364fb28f2ef4a.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Candi Gedong Songo",
+    "description": "Kompleks candi Hindu yang terletak di pegunungan dengan udara sejuk dan pemandangan yang indah.",
+    "imageUrl": "https://i.pinimg.com/564x/4c/61/71/4c61714410cdbcfcc208d415519424a1.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Baturraden",
+    "description": "Destinasi wisata alam pegunungan di Purwokerto dengan udara sejuk dan pemandangan indah.",
+    "imageUrl": "https://i.pinimg.com/736x/f0/91/9a/f0919a25c0bb1e6d2d09f6be7938c336.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Benteng Pendem",
+    "description": "Benteng peninggalan Belanda di Cilacap dengan nuansa sejarah dan keunikan arsitektur.",
+    "imageUrl": "https://i.pinimg.com/564x/0c/de/ef/0cdeefcf63521d911fd395bcabc35a88.jpg"
+  },
+  {
+    "id": 17,
+    "name": "Gunung Slamet",
+    "description": "Gunung tertinggi di Jawa Tengah yang populer untuk pendakian dengan pemandangan spektakuler.",
+    "imageUrl": "https://i.pinimg.com/564x/23/02/76/2302767dd6c18567ca200cc29d5ba149.jpg"
+  },
+  {
+    "id": 18,
+    "name": "Pantai Alam Indah",
+    "description": "Pantai populer di Tegal dengan taman bermain dan pemandangan matahari terbenam yang indah.",
+    "imageUrl": "https://i.pinimg.com/736x/33/1d/5e/331d5ef805113f3389b9092c3c25ec31.jpg"
+  },
+  {
+    "id": 19,
+    "name": "Taman Bunga Celosia",
+    "description": "Taman bunga yang indah dan instagramable di kawasan Ambarawa.",
+    "imageUrl": "https://i.pinimg.com/736x/5e/90/47/5e9047adf29730df13388e06b205deb4.jpg"
+  },
+  {
+    "id": 20,
+    "name": "Museum Purbakala",
+    "description": "Museum yang menyimpan artefak dan peninggalan sejarah di Kabupaten Sragen.",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Museum_Purbakala_Sangiran_1.JPG"
+  },
+  {
+    "id": 21,
+    "name": "Candi Ceto",
+    "description": "Candi Hindu yang terletak di puncak bukit dengan pemandangan alam yang menakjubkan.",
+    "imageUrl": "https://i.pinimg.com/564x/b2/6c/a7/b26ca7f749de278afb5f4d1c33dba308.jpg"
+  },
+  {
+    "id": 22,
+    "name": "Kebun Teh Wonosobo",
+    "description": "Kebun teh yang menawarkan pemandangan hijau dan udara sejuk di Wonosobo.",
+    "imageUrl": "https://i.pinimg.com/564x/f3/2c/f6/f32cf63a1373e02c3fdff5b9201d682c.jpg"
+  },
+  {
+    "id": 23,
+    "name": "Kota Lama Semarang",
+    "description": "Area bersejarah dengan arsitektur kolonial Belanda yang menarik di Semarang.",
+    "imageUrl": "https://i.pinimg.com/736x/41/22/c3/4122c35d0ec27a66795f971e008b49fa.jpg"
+  },
+  {
+    "id": 24,
+    "name": "Museum Ronggowarsito",
+    "description": "Museum yang menampilkan sejarah dan budaya Jawa Tengah di Semarang.",
+    "imageUrl": "https://i.pinimg.com/564x/ef/1f/a4/ef1fa40e561f66110d5f625844908f27.jpg"
+  },
+  {
+    "id": 25,
+    "name": "Goa Jatijajar",
+    "description": "Goa alam yang menarik dengan stalaktit dan stalagmit di Kebumen.",
+    "imageUrl": "https://i.pinimg.com/564x/6d/aa/a3/6daaa31ddd7621ebfdd1185adb6e477e.jpg"
+  },
+  {
+    "id": 26,
+    "name": "Puncak Sikunir",
+    "description": "Tempat terbaik untuk melihat sunrise dengan pemandangan yang menakjubkan di Dieng.",
+    "imageUrl": "https://i.pinimg.com/564x/f1/d4/1a/f1d41a7cb9db6f83a08b739e65b244f5.jpg"
+  },
+  {
+    "id": 27,
+    "name": "Candi Kalasan",
+    "description": "Candi Hindu yang bersejarah di Sleman, Yogyakarta, yang dekat dengan Jawa Tengah.",
+    "imageUrl": "https://i.pinimg.com/736x/00/76/01/0076012a33fb108b024332145ce8d600.jpg"
+  },
+  {
+    "id": 28,
+    "name": "Pantai Tegal",
+    "description": "Pantai yang indah dengan pasir putih dan fasilitas rekreasi di Tegal.",
+    "imageUrl": "https://i.pinimg.com/564x/f8/9e/11/f89e112ed3b36d40b840f5c74324a411.jpg"
+  },
+  {
+    "id": 29,
+    "name": "Puncak Gunung Prau",
+    "description": "Tempat hiking yang menawarkan pemandangan indah dari puncak gunung di Dieng.",
+    "imageUrl": "https://i.pinimg.com/564x/14/bf/a9/14bfa93b779dc26b481f4dbf5fc44788.jpg"
+  },
+  {
+    "id": 30,
+    "name": "Pantai Krakal",
+    "description": "Pantai dengan ombak yang cocok untuk berselancar dan pemandangan yang menakjubkan.",
+    "imageUrl": "https://i.pinimg.com/564x/53/d5/92/53d592983759a66980fcda71c18498dc.jpg"
+  }
+]
