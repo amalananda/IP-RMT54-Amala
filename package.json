@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "pre:test": "sequelize db:seed:undo:all --env test && sequelize db:migrate:undo:all --env test && sequelize db:migrate --env test && sequelize db:seed:all --env test",
+    "test": "jest --detectOpenHandles --verbose --forceExit",
+    "start": "npx nodemon app.js"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +21,7 @@
   },
   "devDependencies": {
     "jest": "^29.7.0",
+    "nodemon": "^3.1.7",
     "sequelize-cli": "^6.6.2",
     "supertest": "^7.0.0"
   }
