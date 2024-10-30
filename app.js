@@ -6,7 +6,7 @@ const express = require("express")
 const app = express()
 
 // comment for testing
-const PORT = process.env.PORT || 3000
+// const PORT = process.env.PORT || 3000
 
 // const { authentication } = require("./middlewares/autohentication")
 const errorHandler = require("./middlewares/errorHandler")
@@ -31,8 +31,8 @@ app.use('/', tripRoute)
 app.use(errorHandler)
 
 //comment for testing
-app.listen(PORT, () => {
-  console.log(`Example app listening on port ${PORT}`)
-})
+// app.listen(PORT, () => {
+//   console.log(`Example app listening on port ${PORT}`)
+// })
 
 module.exports = app
