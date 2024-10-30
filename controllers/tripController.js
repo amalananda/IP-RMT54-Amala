@@ -15,7 +15,7 @@ module.exports = class TripController {
   static async getTripById(req, res, next) {
     const { id } = req.params
     try {
-      const trip = await Trip.findByPk(req.params.id)
+      const trip = await Trip.findByPk(id)
       if (!trip) {
         return res.status(404).json({ message: "Trip not found" })
       }

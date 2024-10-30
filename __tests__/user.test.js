@@ -12,8 +12,6 @@ describe('testing endpoint post/login', () => {
         password: "123456",
       })
       .expect(200)
-    // expect(response.body).toHaveProperty('access_token')
-    // expect(typeof response.body.access_token).toBe('string')
   })
   it('Email tidak diberikan / tidak diinput', async () => {
     const response = await request(app)
