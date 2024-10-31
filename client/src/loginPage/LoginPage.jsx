@@ -14,7 +14,7 @@ export default function LoginPage() {
     e.preventDefault()
 
     try {
-      const response = await axios.post("http://13.215.50.60/login", {
+      const response = await axios.post("https://p2.amalananda.online/login", {
         email,
         password,
       })

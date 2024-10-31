@@ -7,7 +7,7 @@ export default function DestinationCard({ destination = {}, fetchTrips }) {
       const accessToken = localStorage.getItem("access_token")
       const userId = localStorage.getItem("user_id") // Dapatkan user ID dari localStorage
 
-      await axios.post("http://13.215.50.60/trip", {
+      await axios.post("https://p2.amalananda.online/trip", {
         userId,
         title: `Trip to ${destination.name}`,
         destinations: [destination.id],

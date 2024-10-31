@@ -17,7 +17,7 @@ export default function RegisterPage() {
         email,
         password,
       }
-      await axios.post("http://13.215.50.60/register", userData)
+      await axios.post("https://p2.amalananda.online/register", userData)
       navigate("/login") // Redirect ke halaman login setelah registrasi berhasil
     } catch (err) {
       console.log("Please retry", err)
