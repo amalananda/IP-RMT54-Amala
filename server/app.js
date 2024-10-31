@@ -3,7 +3,9 @@ if (process.env.NODE_ENV !== "production") {
 }
 
 const express = require("express")
+const cors = require('cors')
 const app = express()
+app.use(cors())
 
 // comment for testing
 // const PORT = process.env.PORT || 3000
@@ -17,6 +19,7 @@ const tripRoute = require('./routes/tripRoute')
 
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
+
 
 // app.get('/', Controller.welcomePage)
 
