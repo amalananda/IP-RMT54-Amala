@@ -35,7 +35,7 @@ module.exports = class TripController {
       if (destinationIds && destinationIds.length > 0) {
 
         // destinationIds: array
-        destinations = await Destination.findAll({
+        const destinations = await Destination.findAll({
           where: {
             id: destinationIds
           }
