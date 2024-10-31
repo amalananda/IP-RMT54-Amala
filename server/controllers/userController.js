@@ -50,7 +50,7 @@ module.exports = class UserController {
       }
 
       const access_token = signToken({ id: user.id })
-      res.status(200).json({ access_token: access_token, username: user.username })
+      res.status(200).json({ access_token: access_token, username: user.username, user: { id: user.id } }) //kalau salah user: { id: user.id } dihapus
     } catch (err) {
       next(err)
     }
