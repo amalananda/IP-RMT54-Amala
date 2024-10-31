@@ -11,7 +11,7 @@ export default function DestinationPage() {
 
   const fetchDestinations = async () => {
     try {
-      const { data } = await axios.get("http://13.215.50.60/destination", {
+      const { data } = await axios.get("https://p2.amalananda.online/destination", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("access_token")}`
           // Authorization: `Bearer ${isLoggedIn}`

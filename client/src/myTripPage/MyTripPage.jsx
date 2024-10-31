@@ -7,7 +7,7 @@ export default function MyTrips() {
   const fetchTrips = async () => {
     try {
       const accessToken = localStorage.getItem("access_token")
-      const response = await axios.get("http://13.215.50.60/trips/my-trips", {
+      const response = await axios.get("https://p2.amalananda.online/trips/my-trips", {
         headers: {
           Authorization: `Bearer ${accessToken}`,
         },
