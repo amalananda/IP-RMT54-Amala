@@ -5,6 +5,8 @@ const TripController = require('../controllers/tripController')
 router.get('/trip', TripController.getTrips)
 // Membuat trip baru dan menyimpan destinasi terkait
 router.post('/trip', TripController.createTrip)
+
+router.get('/trip/my-trips', TripController.getTripsByUser)
 // Mendapatkan trip berdasarkan ID beserta destinasi terkait
 router.get('/trip/:id', TripController.getTripById)
 // Memperbarui trip berdasarkan ID dan destinasi terkait

@@ -4,7 +4,8 @@ module.exports = class TripController {
   // Mendapatkan semua trip beserta destinasi terkait
   static async getTrips(req, res, next) {
     try {
-      const trips = await Trip.findAll()
+      // only user trip is shown
+      const trips = await Trip.findAll({ include: [Destination] })
       res.json(trips)
     } catch (error) {
       next(error) // Mengirim kesalahan ke middleware error handler
@@ -27,12 +28,21 @@ module.exports = class TripController {
 
   // Membuat trip baru dan menyimpan destinasi terkait
   static async createTrip(req, res, next) {
-    const { userId, title, startDate, endDate, destinations } = req.body
+    const { title, startDate, endDate, destinationIds } = req.body
+    const userId = req.user.id
     try {
       const newTrip = await Trip.create({ userId, title, startDate, endDate })
-      if (destinations && destinations.length) {
+      if (destinationIds && destinationIds.length > 0) {
+
+        // destinationIds: array
+        destinations = await Destination.findAll({
+          where: {
+            id: destinationIds
+          }
+        })
         await newTrip.setDestinations(destinations)
       }
+
       res.status(201).json(newTrip)
     } catch (error) {
       next(error)
@@ -41,32 +51,59 @@ module.exports = class TripController {
 
   // Memperbarui trip berdasarkan ID dan destinasi terkait
   static async updateTrip(req, res, next) {
-    const { destinations } = req.body
-    console.log("Destinations received:", destinations) // Log destinasi yang diterima
+    const { destinationId } = req.body
+
+    // console.log("Destinations received:", destinationId) // Log destinasi yang diterima
 
     try {
       const [updated] = await Trip.update(req.body, {
         where: { id: req.params.id }
       })
 
+
+
       if (updated === 0) {
         return res.status(404).json({ message: "Trip not found" })
       }
 
-      const updatedTrip = await Trip.findByPk(req.params.id)
-      console.log("Updated trip:", updatedTrip) // Log trip yang diperbarui
+
+
+      const selectedTrip = await Trip.findByPk(req.params.id)
+
+      // check if the trip owns by user
+      if (selectedTrip.userId !== req.user.id) {
+        // ganti unauthorisze
+        return res.status(401).json({ message: "You are unauthorized" })
+      }
 
       // Mengatur ulang destinasi terkait
-      if (destinations && destinations.length) {
-        await updatedTrip.setDestinations(destinations)
-        console.log("Destinations set for trip:", await updatedTrip.getDestinations()) // Log destinasi yang baru disetel
-      } else {
-        await updatedTrip.setDestinations([])
+      if (destinationId) {
+        const destinations = await Destination.findByPk(destinationId)
+
+        await selectedTrip.addDestinations(destinations)
+        // console.log("Destinations set for trip:", await selectedTrip.getDestinations()) // Log destinasi yang baru disetel
       }
+
+      const updatedTrip = await Trip.findByPk(selectedTrip.id, { include: [Destination] })
+
 
       res.json(updatedTrip)
     } catch (error) {
       console.error("Error updating trip:", error) // Log kesalahan
+      next(error)
+    }
+  }
+  static async getTripsByUser(req, res, next) {
+    console.log("HERE")
+
+    const userId = req.user.id // Asumsi Anda menyimpan user ID dalam token
+    try {
+      const trips = await Trip.findAll({
+        where: { userId },
+        include: [Destination], // Mengikutkan destinasi
+      })
+      res.json(trips)
+    } catch (error) {
       next(error)
     }
   }
