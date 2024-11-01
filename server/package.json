@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "pre:test": "sequelize db:seed:undo:all --env test && sequelize db:migrate:undo:all --env test && sequelize db:migrate --env test && sequelize db:seed:all --env test",
-    "test": "jest --detectOpenHandles --verbose --forceExit",
+    "test": "jest --detectOpenHandles --verbose --forceExit --coverage",
     "start": "npx nodemon app.js"
   },
   "keywords": [],

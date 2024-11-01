@@ -4,6 +4,10 @@ const { signToken } = require("../helpers/jwt")
 module.exports = class UserController {
   static async register(req, res, next) {
     const { username, email, password } = req.body
+
+    if (!email) {
+      return res.status(400).json({ message: "Email is required" })
+    }
     try {
       // console.log("Request Body: ", req.body)
       const newUser = await User.create({

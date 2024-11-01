@@ -67,7 +67,7 @@ describe("TripController", () => {
           title: "Trip to Jateng",
           startDate: new Date(),
           endDate: new Date(),
-          destinations: [1, 2]
+          destinationIds: [1, 2]
         })
 
       expect(tripResponse.status).toBe(201)
@@ -100,7 +100,7 @@ describe("TripController", () => {
           title: "Updated Trip to Jateng",
           startDate: new Date(),
           endDate: new Date(),
-          destinations: [3]
+          destinationId: [3]
         })
 
       expect(response.status).toBe(200)
