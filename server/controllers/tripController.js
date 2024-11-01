@@ -77,10 +77,11 @@ module.exports = class TripController {
       }
 
       // Mengatur ulang destinasi terkait
-      if (destinationId) {
-        const destinations = await Destination.findByPk(destinationId)
-
-        await selectedTrip.addDestinations(destinations)
+      if (Array.isArray(destinationId) && destinationId.length > 0) {
+        const destinations = await Destination.findAll({
+          where: { id: destinationId },
+        })
+        await selectedTrip.setDestinations(destinations)
         // console.log("Destinations set for trip:", await selectedTrip.getDestinations()) // Log destinasi yang baru disetel
       }
 
