@@ -12,6 +12,7 @@ export default function Navbar() {
   const handleLogoClick = () => {
     navigate("/") // Ganti dengan path home yang sesuai
   }
+
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
@@ -44,10 +45,10 @@ export default function Navbar() {
                 Destinations
               </Link>
             </li>
-            <button className="btn btn-outline-danger" onClick={handleLogout}>
-              Logout
-            </button>
           </ul>
+          <button className="btn btn-outline-danger" onClick={handleLogout}>
+            Logout
+          </button>
         </div>
       </div>
     </nav>

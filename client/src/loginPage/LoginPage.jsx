@@ -3,6 +3,7 @@ import { useNavigate, Link } from "react-router-dom"
 import axios from "axios"
 import { addUserName } from '../authSlice'
 import { useDispatch } from "react-redux"
+import Swal from "sweetalert2"
 
 export default function LoginPage() {
   const [email, setEmail] = useState("")
@@ -19,11 +20,17 @@ export default function LoginPage() {
         password,
       })
       localStorage.setItem("access_token", response.data.access_token)
+      localStorage.setItem("user.id", response.data.user.id)
       dispatch(addUserName(response.data.username))
-
       navigate("/")
     } catch (err) {
       console.log("Please retry", err)
+
+      Swal.fire({
+        icon: "error",
+        title: "Login Failed Buddy",
+        text: err?.response?.data?.message || " Please try again buddy.",
+      })
     }
   }
 

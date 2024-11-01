@@ -8,14 +8,19 @@ export default function HomePage() {
 
   return (
     <section className="homepage-container">
+      <div className="username-container">
+        <p>Hai!! {username}</p>
+        <p>Yuk jalan-jalan di Jawa Tengah</p>
+      </div>
+      <div className="chat-container">
+        <h2>Chat with Gemini AI</h2>
+        <GeminiChat />
+      </div>
       <div className="content-wrapper">
-        <p>{username}</p>
         <WeatherApp />
-        <div className="chat-container">
-          <h2>Chat with Gemini AI</h2>
-          <GeminiChat />
-        </div>
+
       </div>
     </section>
+
   )
 }

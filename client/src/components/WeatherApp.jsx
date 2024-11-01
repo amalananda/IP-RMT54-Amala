@@ -6,7 +6,7 @@ function WeatherApp() {
   const [weatherData, setWeatherData] = useState([])
 
   useEffect(() => {
-    const cities = ["Purwokerto", "Semarang", "Tegal", "Yogyakarta", "Solo"]
+    const cities = ["Purwokerto", "Semarang", "Tegal", "Yogyakarta", "Solo", "Cilacap"]
     fetchWeatherForCities(cities)
   }, [])
 
@@ -43,19 +43,22 @@ function WeatherApp() {
   }
 
   return (
-    <div className="weather-container">
+    <section>
       <h1 className="title">Cuaca di Beberapa Kota</h1>
-      {weatherData.map((data, index) => (
-        <div className="weather-card" key={index}>
-          <h2>{data.city}</h2>
-          <p>Latitude: {data.latitude}</p>
-          <p>Longitude: {data.longitude}</p>
-          <p>Waktu: {data.time}</p>
-          <p>Suhu: {data.temperature} °C</p>
-          <p>Kondisi: {data.weatherCode === 3 ? "Berawan" : "Tidak Berawan"}</p>
-        </div>
-      ))}
-    </div>
+      <div className="weather-container">
+
+        {weatherData.map((data, index) => (
+          <div className="weather-card" key={index}>
+            <h2>{data.city}</h2>
+            <p>Latitude: {data.latitude}</p>
+            <p>Longitude: {data.longitude}</p>
+            <p>Waktu: {data.time}</p>
+            <p>Suhu: {data.temperature} °C</p>
+            <p>Kondisi: {data.weatherCode === 3 ? "Berawan" : "Tidak Berawan"}</p>
+          </div>
+        ))}
+      </div>
+    </section>
   )
 }
 
