@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { useNavigate } from "react-router-dom"
+import { useNavigate, Link } from "react-router-dom"
 import axios from "axios"
 
 export default function RegisterPage() {
@@ -10,17 +10,17 @@ export default function RegisterPage() {
 
   const handleRegister = async (e) => {
     e.preventDefault()
-
     try {
-      const userData = {
-        username,
-        email,
-        password,
+      const userData = { username, email, password }
+      const response = await axios.post("https://p2.amalananda.online/register", userData)
+
+      if (response.status === 201) {
+        // Jika pendaftaran berhasil, redirect ke halaman login
+        navigate("/login")
       }
-      await axios.post("https://p2.amalananda.online/register", userData)
-      navigate("/login") // Redirect ke halaman login setelah registrasi berhasil
     } catch (err) {
-      console.log("Please retry", err)
+      console.log("Registration failed. Please retry:", err)
+      // Optionally, you could show a message to the user here.
     }
   }
 
@@ -29,7 +29,6 @@ export default function RegisterPage() {
       <div className="card p-4" style={{ width: "400px" }}>
         <h2 className="text-center mb-4">Sign Up</h2>
         <form onSubmit={handleRegister}>
-          {/* Username input */}
           <div className="form-outline mb-4">
             <input
               type="text"
@@ -39,11 +38,9 @@ export default function RegisterPage() {
               onChange={(e) => setUsername(e.target.value)}
               required
             />
-            <label className="form-label" htmlFor="username">
-              Username
-            </label>
+            <label className="form-label" htmlFor="username">Username</label>
           </div>
-          {/* Email input */}
+
           <div className="form-outline mb-4">
             <input
               type="email"
@@ -53,11 +50,9 @@ export default function RegisterPage() {
               onChange={(e) => setEmail(e.target.value)}
               required
             />
-            <label className="form-label" htmlFor="email">
-              Email address
-            </label>
+            <label className="form-label" htmlFor="email">Email address</label>
           </div>
-          {/* Password input */}
+
           <div className="form-outline mb-4">
             <input
               type="password"
@@ -67,56 +62,23 @@ export default function RegisterPage() {
               onChange={(e) => setPassword(e.target.value)}
               required
             />
-            <label className="form-label" htmlFor="password">
-              Password
-            </label>
+            <label className="form-label" htmlFor="password">Password</label>
           </div>
-          {/* Checkbox */}
-          <div className="form-check d-flex justify-content-center mb-4">
-            <input
-              className="form-check-input me-2"
-              type="checkbox"
-              id="newsletter"
-            />
-            {/* <label className="form-check-label" htmlFor="newsletter">
-              Subscribe to our newsletter
-            </label> */}
-          </div>
-          {/* Submit button */}
+
           <button
             type="submit"
-            className="btn btn-primary btn-block mb-4"
+            className="btn btn-primary mb-4"
+            style={{
+              display: "block",
+              margin: "0 auto", // Center the button
+              width: "100%", // Optional: make button full width
+            }}
           >
             Sign up
           </button>
-          {/* Register buttons */}
-          <div className="text-center">
-            <p>or sign up with:</p>
-            {/* <button
-              type="button"
-              className="btn btn-secondary btn-floating mx-1"
-            >
-              <i className="fab fa-facebook-f" />
-            </button>
-            <button
-              type="button"
-              className="btn btn-secondary btn-floating mx-1"
-            >
-              <i className="fab fa-google" />
-            </button>
-            <button
-              type="button"
-              className="btn btn-secondary btn-floating mx-1"
-            >
-              <i className="fab fa-twitter" />
-            </button>
-            <button
-              type="button"
-              className="btn btn-secondary btn-floating mx-1"
-            >
-              <i className="fab fa-github" />
-            </button> */}
-          </div>
+          <p className="text-center mt-3">
+            You have account?{" "} <Link to="/login" className="text-decoration-none">Login</Link>
+          </p>
         </form>
       </div>
     </div>

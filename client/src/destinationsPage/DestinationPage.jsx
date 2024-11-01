@@ -1,27 +1,24 @@
+// DestinationPage.jsx
 import { useEffect, useState } from 'react'
 import axios from 'axios'
-// import GeminiChat from '../components/GeminiChat'
 import DestinationCard from '../components/DestinationCard'
-// import ClubCard from '../components/ClubCard'
-// import { useSelector } from "react-redux"
 
 export default function DestinationPage() {
-  const [destination, setDestination] = useState([])
-  // const isLoggedIn = useSelector((state) => state.auth.access_token)
+  const [destinations, setDestinations] = useState([])
 
   const fetchDestinations = async () => {
     try {
       const { data } = await axios.get("https://p2.amalananda.online/destination", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("access_token")}`
-          // Authorization: `Bearer ${isLoggedIn}`
         }
       })
-      setDestination(data)
+      setDestinations(data)
     } catch (err) {
-      console.log(err)
+      console.error("Error fetching destinations:", err)
     }
   }
+
   useEffect(() => {
     fetchDestinations()
   }, [])
@@ -29,11 +26,13 @@ export default function DestinationPage() {
   return (
     <section>
       <div className="d-flex flex-wrap gap-3 justify-content-center py-5">
-        {destination.map(e => {
-          return (
-            <DestinationCard key={e.id} destination={e} fetchDestinations={fetchDestinations} />
-          )
-        })}
+        {destinations.map(destination => (
+          <DestinationCard
+            key={destination.id}
+            destination={destination}
+            fetchDestinations={fetchDestinations}
+          />
+        ))}
       </div>
     </section>
   )
